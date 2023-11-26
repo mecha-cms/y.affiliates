@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "bootstrap": "^4.6.2"
+  },
+  "devDependencies": {
+    "@taufik-nurrohman/factory": "*"
+  },
+  "scripts": {
+    "pack": "pack --clean=false --from=.factory --to=."
+  }
+}
