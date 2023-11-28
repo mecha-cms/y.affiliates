@@ -6,6 +6,6 @@
     "@taufik-nurrohman/factory": "*"
   },
   "scripts": {
-    "pack": "pack --clean=false --from=.factory --to=."
+    "pack": "pack --clean=false --from=.factory --js-globals=\"$:jQuery\" --to=."
   }
 }
