@@ -1,12 +1,17 @@
 <ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+  <li class="<?= $site->is('home') ? 'active ' : ""; ?>nav-item">
+    <a<?= $site->is('home') ? ' aria-current="page"' : ""; ?> class="nav-link px-3" href="<?= eat($url); ?>">
+      <?= i('Home'); ?>
+    </a>
+  </li>
   <?php foreach ($links as $link): ?>
-    <li class="nav-item">
+    <li class="<?= $link->current ? 'active ' : ""; ?>nav-item">
       <?php if ($link->link): ?>
         <a class="nav-link px-3" href="<?= eat($link->link); ?>" target="_blank">
           <?= $link->title; ?>
         </a>
       <?php else: ?>
-        <a class="nav-link px-3" href="<?= eat($link->url); ?>">
+        <a<?= $link->current ? ' aria-current="page"' : ""; ?> class="nav-link px-3" href="<?= eat($link->url); ?>">
           <?= $link->title; ?>
         </a>
       <?php endif; ?>

@@ -1,6 +1,10 @@
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+import bootstrap from 'bootstrap';
+import jquery from 'jquery';
+import popper from 'popper.js';
 
-(function ($) {"use strict";
+window.$ = window.jquery = window.jQuery = jquery;
+window.bootstrap = window.Bootstrap = bootstrap;
+window.popper = window.Popper = popper;
 
 $(function () {
 var header = $(".start-style");
@@ -28,5 +32,3 @@ _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
 }, 1);
 }
 });
-
-})(jQuery);

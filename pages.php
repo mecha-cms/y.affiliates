@@ -8,6 +8,8 @@
           <a href="<?= eat($page->link ?? $page->url); ?>">
               <?php if ($image = $page->image): ?>
               <img alt="<?= eat($page->title); ?>" class="rounded mb-4" src="<?= eat($image); ?>">
+              <?php else: ?>
+              <span class="rounded mb-4" role="img" style="background: #<?= substr(md5($page->url), 0, 6); ?>; display: block; height: 184px;"></span>
               <?php endif; ?>
         </a>
     <div class="card-block">

@@ -1,11 +1,12 @@
 {
   "dependencies": {
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^4.6.2",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "@taufik-nurrohman/factory": "*"
   },
   "scripts": {
-    "pack": "pack --clean=false --from=.factory --js-globals=\"$:jQuery\" --to=."
+    "pack": "pack --clean=false --from=.factory --to=."
   }
 }

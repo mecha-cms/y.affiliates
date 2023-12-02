@@ -9,7 +9,7 @@
     <?php foreach ($links as $link): ?>
       <li>
         <?php if ($link->link): ?>
-          <a href="<?= eat($link->link); ?>">
+          <a<?= $link->current ? ' aria-current="page"' : ""; ?> href="<?= eat($link->link); ?>">
             <?= $link->title; ?>
           </a>
         <?php else: ?>
