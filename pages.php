@@ -5,16 +5,16 @@
       <?php foreach ($pages as $page): ?>
       <div class="col-md-6 mb-5">
       <div class="card">
-          <a href="<?= eat($page->link ?? $page->url); ?>">
-              <?php if ($image = $page->image): ?>
-              <img alt="<?= eat($page->title); ?>" class="rounded mb-4" src="<?= eat($image); ?>">
-              <?php else: ?>
-              <span class="rounded mb-4" role="img" style="background: #<?= substr(md5($page->url), 0, 6); ?>; display: block; height: 184px;"></span>
-              <?php endif; ?>
+        <a class="d-block mb-4" href="<?= eat($page->link ?? $page->url); ?>" style="height: 0; overflow: hidden; padding-top: 56.25%; position: relative;">
+          <?php if ($image = $page->image): ?>
+            <img alt="<?= eat($page->title); ?>" class="d-block rounded" src="<?= eat($image); ?>" style="position: absolute; top: 0; right: 0;">
+          <?php else: ?>
+            <span class="d-block rounded" role="img" style="background: #<?= substr(md5($page->url), 0, 6); ?>; bottom: 0; left: 0; position: absolute; right: 0; top: 0;"></span>
+          <?php endif; ?>
         </a>
     <div class="card-block">
         <h2 class="card-title h4 serif-font"><a href="<?= eat($page->link ?? $page->url); ?>"><?= $page->title; ?></a></h2>
-        <p class="card-text text-muted"><?= $page->description; ?></p>
+        <p class="card-text text-muted"><?= To::description($page->description, 80); ?></p>
         <div class="metafooter">
             <div class="wrapfooter small d-flex align-items-center">
                 <span class="author-meta">

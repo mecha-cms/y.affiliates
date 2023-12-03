@@ -80,8 +80,6 @@
     <div class="article-post serif-font">
       <?= $page->content; ?>
     </div>
-    <div id="comments">
-    </div>
   </div>
 <?php endif; ?>
 <?= self::exit(); ?>

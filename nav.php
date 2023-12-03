@@ -17,7 +17,7 @@
       <?php endif; ?>
     </li>
   <?php endforeach; ?>
-  <li class="nav-item">
-    <a class="nav-link px-3 ml-2 btn btn-dark text-white px-3" href="https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll/" alt="Get this theme">Get this theme</a>
-  </li>
+  <!-- <li class="nav-item">
+    <a class="nav-link px-3 ml-2 btn btn-dark text-white px-3" href="https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll">Get this theme</a>
+  </li> -->
 </ul>
