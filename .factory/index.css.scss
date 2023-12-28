@@ -1,8 +1,3 @@
-$green: #08a057 !default;
-$blue: #3d61fd !default;
-
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
 
@@ -624,56 +619,56 @@ img {
   height: auto;
 }
 
-.bottompagination span.navigation a {
-  background: #fdd93d;
-  color: #333;
-  padding: 5px;
-  border-radius: 3px;
-  text-transform: none;
-  font-weight: 600;
-  letter-spacing: 0;
-  min-width: 100px;
-  display: inline-block;
-}
-.pointerup {
-  margin-bottom: -18px;
-  margin-left: 49%;
-  font-size: 30px;
-}
-.pointerup i.fa {
-  color: #eaeaea;
-}
-.bottompagination span.navigation i {
-  display: inline-block;
-}
-span.navigation {
-  display: block;
-  font-size: 0.93rem;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-}
-span.navigation:before {
-  margin-bottom: 0;
-  position: absolute;
-  z-index: 1;
-  left: 0px;
-  right: 0px;
-  top: 12px;
-  height: 1px;
-  content: "";
-}
-.pagination {
-  display: inline-block;
-  background: #fff;
-  z-index: 1;
-  position: relative;
-  padding: 0 20px;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
+// .bottompagination span.navigation a {
+//   background: #fdd93d;
+//   color: #333;
+//   padding: 5px;
+//   border-radius: 3px;
+//   text-transform: none;
+//   font-weight: 600;
+//   letter-spacing: 0;
+//   min-width: 100px;
+//   display: inline-block;
+// }
+// .pointerup {
+//   margin-bottom: -18px;
+//   margin-left: 49%;
+//   font-size: 30px;
+// }
+// .pointerup i.fa {
+//   color: #eaeaea;
+// }
+// .bottompagination span.navigation i {
+//   display: inline-block;
+// }
+// span.navigation {
+//   display: block;
+//   font-size: 0.93rem;
+//   font-weight: 700;
+//   text-align: center;
+//   position: relative;
+// }
+// span.navigation:before {
+//   margin-bottom: 0;
+//   position: absolute;
+//   z-index: 1;
+//   left: 0px;
+//   right: 0px;
+//   top: 12px;
+//   height: 1px;
+//   content: "";
+// }
+// .pagination {
+//   display: inline-block;
+//   background: #fff;
+//   z-index: 1;
+//   position: relative;
+//   padding: 0 20px;
+//   font-size: 13px;
+//   letter-spacing: 0.5px;
+//   font-weight: 500;
+//   text-transform: uppercase;
+// }
 
 .footer {
   margin-top: 4rem;
@@ -688,3 +683,5 @@ span.navigation:before {
   transition: all 0.3s;
   opacity: 0.8;
 }
+
+@import '_tweaks';

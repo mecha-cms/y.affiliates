@@ -1,0 +1,6 @@
+.article-post a {
+  &[aria-current],
+  &[aria-disabled] {
+    box-shadow: none;
+  }
+}

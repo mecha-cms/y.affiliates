@@ -1,0 +1,19 @@
+---
+title: Affiliates
+description: A blogging theme for Bootstrap 4 suitable for affiliate marketers.
+image: /lot/y/affiliates/index.png
+link: https://bootstrapstarter.com/template-affiliates-bootstrap-html
+author: Taufik Nurrohman
+type: Markdown
+version: 1.0.0
+...
+
+### Newsletter
+
+To replace your newsletter form or edit your Mailchimp ID, navigate to `.\lot\y\affiliates\newsletter.html`.
+
+### States
+
+ - Configure the hero text and links for the front page by editing the `hero` data in `.\lot\y\affiliates\state.php` file.
+ - Configure the social links for the header by editing the `social` data in `.\lot\y\affiliates\state.php` file.
+ - Set the `route` value to `/article` so that the front page will display the blog page by default.

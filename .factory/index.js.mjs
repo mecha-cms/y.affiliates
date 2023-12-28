@@ -1,34 +1,27 @@
-import bootstrap from 'bootstrap';
-import jquery from 'jquery';
-import popper from 'popper.js';
-
-window.$ = window.jquery = window.jQuery = jquery;
-window.bootstrap = window.Bootstrap = bootstrap;
-window.popper = window.Popper = popper;
-
 $(function () {
-var header = $(".start-style");
-$(window).scroll(function () {
-var scroll = $(window).scrollTop();
-if (scroll >= 10) {
-header.removeClass('start-style').addClass("scroll-on");
-} else {
-header.removeClass("scroll-on").addClass('start-style');
-}
-});
+    var header = $(".start-style");
+    $(window).scroll(function () {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 10) {
+            header.removeClass('start-style').addClass("scroll-on");
+        } else {
+            header.removeClass("scroll-on").addClass('start-style');
+        }
+    });
 });
 
 // Animation
 $(document).ready(function () {
-$('body.hero-anime').removeClass('hero-anime');
+    $('body.hero-anime').removeClass('hero-anime');
 });
 
 // Menu on hover
 $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
-if ($(window).width() > 750) {
-var _d = $(e.target).closest('.nav-item');_d.addClass('show');
-setTimeout(function () {
-_d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
-}, 1);
-}
+    if ($(window).width() > 750) {
+        var _d = $(e.target).closest('.nav-item');
+        _d.addClass('show');
+        setTimeout(function () {
+            _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
+        }, 1);
+    }
 });

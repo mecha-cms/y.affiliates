@@ -1,4 +1,4 @@
-<ul class="navbar-nav ml-auto font-weight-bold d-flex align-items-center">
+<ul class="align-items-center d-flex font-weight-bold ml-auto navbar-nav">
   <li class="<?= $site->is('home') ? 'active ' : ""; ?>nav-item">
     <a<?= $site->is('home') ? ' aria-current="page"' : ""; ?> class="nav-link px-3" href="<?= eat($url); ?>">
       <?= i('Home'); ?>
@@ -18,6 +18,6 @@
     </li>
   <?php endforeach; ?>
   <!-- <li class="nav-item">
-    <a class="nav-link px-3 ml-2 btn btn-dark text-white px-3" href="https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll">Get this theme</a>
+    <a class="btn btn-dark ml-2 nav-link px-3 px-3 text-white" href="https://bootstrapstarter.com/template-affiliates-bootstrap-jekyll">Get this theme</a>
   </li> -->
 </ul>
