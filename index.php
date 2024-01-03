@@ -36,3 +36,61 @@ $states = [
 foreach ($states as $k => $v) {
     !State::get($k) && null !== $v && State::set($k, $v);
 }
+
+Hook::set('y.alert', function ($y) {
+    $y[0] = 'div';
+    foreach ($y[1] as &$v) {
+        $v[2]['class'] = 'alert alert-' . (['error' => 'danger'][$v['type'] ?? $v[2]['type']] ?? 'info');
+    }
+    $y[2]['class'] = 'mb-3';
+    return $y;
+});
+
+Hook::set('y.form.comment', function ($y) {
+    foreach ([
+        'author' => 'input',
+        'content' => 'textarea',
+        'email' => 'input',
+        'link' => 'input'
+    ] as $k => $v) {
+        if ($v === ($y[1][$k][1][2][1][0][0] ?? P)) {
+            $y[1][$k][1][2][1][0][2]['class'] = 'form-control';
+        }
+        if ('label' === ($y[1][$k][1][0][0] ?? P)) {
+            $y[1][$k][1][0][2]['class'] = 'col-form-label';
+        }
+        if ('small' === ($y[1][$k][1][2][1][2][0] ?? P)) {
+            $y[1][$k][1][2][1][2][2]['class'] = 'text-muted';
+        }
+    }
+    if ('button' === ($y[1]['tasks'][1][2][1]['publish'][0] ?? P)) {
+        $y[1]['tasks'][1][2][1]['publish'][2]['class'] = 'btn btn-primary';
+    }
+    if ('a' === ($y[1]['tasks'][1][2][1]['cancel'][0] ?? P)) {
+        if (!empty($y[1]['tasks'][1][2][1]['cancel'][2]['class'])) {
+            $y[1]['tasks'][1][2][1]['cancel'][2]['class'] = 'btn btn-danger ' . ($y[1]['tasks'][1][2][1]['cancel'][2]['class']);
+        }
+    }
+    return $y;
+});
+
+Hook::set('y.form.user', function ($y) {
+    foreach ([
+        'pass' => 'input',
+        'user' => 'input'
+    ] as $k => $v) {
+        if ($v === ($y[1][$k][1][2][1][0][0] ?? P)) {
+            $y[1][$k][1][2][1][0][2]['class'] = 'form-control';
+        }
+        if ('label' === ($y[1][$k][1][0][0] ?? P)) {
+            $y[1][$k][1][0][2]['class'] = 'col-form-label';
+        }
+        if ('small' === ($y[1][$k][1][2][1][2][0] ?? P)) {
+            $y[1][$k][1][2][1][2][2]['class'] = 'text-muted';
+        }
+    }
+    if ('button' === ($y[1]['tasks'][1][2][1]['enter'][0] ?? P)) {
+        $y[1]['tasks'][1][2][1]['enter'][2]['class'] = 'btn btn-primary';
+    }
+    return $y;
+});
