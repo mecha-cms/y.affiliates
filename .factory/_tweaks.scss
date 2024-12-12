@@ -1,6 +1,8 @@
-.article-post a {
-  &[aria-current],
-  &[aria-disabled] {
-    box-shadow: none;
+@mixin a--current {
+  .article-post a {
+    &[aria-current],
+    &[aria-disabled] {
+      box-shadow: none;
+    }
   }
 }
