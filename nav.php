@@ -11,7 +11,8 @@
           <?= $link->title; ?>
         </a>
       <?php else: ?>
-        <a<?= $link->current ? ' aria-current="page"' : ""; ?> class="nav-link px-3" href="<?= eat($link->url); ?>">
+        <?php $children = $link->children ?? false; ?>
+        <a<?= $link->current ? ' aria-current="page"' : ""; ?> class="nav-link px-3" href="<?= eat($link->url . ($children && $children->count ? '/1' : "")); ?>">
           <?= $link->title; ?>
         </a>
       <?php endif; ?>
